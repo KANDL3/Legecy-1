@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\item\Item.cs" />
     <Compile Include="Assets\Scripts\item\enums\Material.cs" />
     <Compile Include="Assets\Scripts\item\Block.cs" />
+    <Compile Include="Assets\Scripts\PlayerMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
