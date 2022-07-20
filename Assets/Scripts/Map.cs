@@ -4,26 +4,34 @@ using UnityEngine;
 
 public class Map : MonoBehaviour
 {
-    public Texture2D material;
-    private Sprite mySprite;
-    private SpriteRenderer sr;
-
-    // Start is called before the first frame update
-    void Awake()
-    {
-        sr = gameObject.AddComponent<SpriteRenderer>() as SpriteRenderer;
-
-        transform.position = new Vector2(-1, 0);
-    }
+    public Sprite[] sprites;
 
     void Start()
     {
-        sr.sprite = Sprite.Create(material, new Rect(0.0f, 0.0f, 512, 512), new Vector2(0, 0), 512);
+        
+        for (int i = -5; i < 5; i++)
+        {
+            Material material = new Material(sprites, MaterialType.STONE);
+            Block block = new Block(material, i, 0);
+            block.AplplyBoxCollider();
+            block.SetParent(transform);
+        }
+
+        for (int i = -5; i < 5; i++)
+        {
+            Material material = new Material(sprites, MaterialType.STONE);
+            Block block = new Block(material, i, 1);
+            block.AplplyBoxCollider();
+            block.SetParent(transform);
+        }
+        for (int i = -5; i < 5; i++)
+        {
+            Material material = new Material(sprites, MaterialType.GRASS);
+            Block block = new Block(material, i, 2);
+            block.AplplyBoxCollider();
+            block.SetParent(transform);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

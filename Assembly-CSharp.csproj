@@ -58,6 +58,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\WorldController.cs" />
     <Compile Include="Assets\Scripts\Map.cs" />
+    <Compile Include="Assets\Scripts\item\Item.cs" />
+    <Compile Include="Assets\Scripts\item\enums\Material.cs" />
+    <Compile Include="Assets\Scripts\item\Block.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
